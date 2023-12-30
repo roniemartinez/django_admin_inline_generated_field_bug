@@ -13,10 +13,6 @@ class Example(models.Model):
     name = models.CharField(max_length=100)
     reversed = models.GeneratedField(expression=Reverse(F("name")), output_field=models.CharField(max_length=100), db_persist=True)
 
-    class Meta:
-        unique_together = ["name", "reversed"]
-
-
     # This fixes the issue
     # def get_deferred_fields(self) -> set:
     #     deferred_field = super().get_deferred_fields()

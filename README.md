@@ -1,4 +1,4 @@
-# BUG: Using unique_together and GeneratedField
+# BUG: Using Admin Inline and GeneratedField
 
 
 To replicate:
